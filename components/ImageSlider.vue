@@ -28,7 +28,9 @@ const props = defineProps({
     type: Array,
   },
 });
+
 const emit = defineEmits(["select"]);
+
 let currentImage = ref(0);
 
 const settings = {

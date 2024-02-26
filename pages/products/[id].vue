@@ -25,6 +25,7 @@
 const route = useRoute();
 const id = +route.params.id;
 const selectedProduct = computed(() => products.find((p) => p.id === id));
+
 const selectedImageIndex = ref(0);
 const onImageSelected = (index) => {
   selectedImageIndex.value = index;
@@ -296,6 +297,15 @@ const products = [
   cursor: pointer;
 }
 
+@media (max-width: 1130px) {
+  .product-details-container {
+    gap: 2rem;
+  }
+  .product-item-container {
+    width: 90%;
+  }
+}
+
 @media (max-width: 1000px) {
   .product-item-container {
     flex-direction: column;
@@ -309,6 +319,17 @@ const products = [
     gap: 2rem;
   }
 }
-@media (max-width: 850px) {
+
+@media (max-width: 550px) {
+  .product-details-button {
+    font-size: 0.7rem;
+    padding: 0.5rem 1rem;
+  }
+  .product-details-title {
+    font-size: 1.5rem;
+  }
+  .product-details-container {
+    gap: 1.2rem;
+  }
 }
 </style>
